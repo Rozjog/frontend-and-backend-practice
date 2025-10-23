@@ -1,52 +1,108 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Семестровая работа</title>
     <link rel="stylesheet" href="../style/style.css">
 </head>
+
 <body>
-    
+
     <div class="page-container">
 
-        <header class="header">Хэдр</header>
+        <header class="header">
+            <h1>Новости</h1>
+        </header>
 
-        <nav class = "nav">
+        <nav class="nav">
             <ul class="nav-list">
-                <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
-                <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
-                <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
-                <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
-                <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="../index_v1.html">Главная</a>
+                </li>
+
+                <li class="nav-item nav-item--active">
+                    <a class="nav-link" href="news.html">Новости</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="practices.html">Практики</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="goods_v1.html">Товары</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="contacts.html">Контакты</a>
+                </li>
+
             </ul>
+
+                <button id="themeSwitch" class="theme-switch">☾</button>
         </nav>
 
-        <div class="content">
+        <main class="content">
 
-            <div class="news-section">
+            <section class="news-container">
 
-                <div class="news-card">
-                    <br><h1 class="news-title">Снова в школу</h1>
-                    <p class="news-desc">01.09.2025 6:30 Илья&CO</p>
-                    <p class="news-desc">Учебный год началася</p>
+                <h2 class="section-title">Последние новости</h2>
+
+                <div class="news-grid">
+
+                    <article class="news-card">
+                        <header class="news-header">
+                            <h2 class="news-title">Кошка стала главой департамента в японском городе</h2>
+                            <p class="news-meta">01.09.2025 6:30 Илья&CO</p>
+                        </header>
+                        <div class="news-content">
+                        <p class="news-text">В японском городке Тиба, в поисках оригинальности и способа привлечь внимание к местным вопросам,
+                            на пост главы департамента по связям с общественностью назначили… кошку по имени Момо! Она, конечно, не занимается
+                            административной работой, но её очаровательные фотографии и статус помогают повысить узнаваемость города и привлекать
+                            туристов.Мы все мечтаем о таком карьерном старте!</p>
+                        </div>
+                    </article>
+
+                    <article class="news-card">
+                        <header class="news-header">
+                            <h2 class="news-title"> Британец выиграл в лотерею… дважды!</h2>
+                            <p class="news-meta">25.09.2025 10:00 Илья&CO</p>
+                        </header>
+                        <div class="news-content">
+                        <p class="news-text">Что может быть лучше, чем выиграть один раз в лотерею? А вот британец по имени 
+                            Саймон Ли доказал, что дважды — тоже возможно. Он стал обладателем двух крупных выигрышей на общую
+                            сумму 6 миллионов фунтов! Саймон сам не мог поверить в свою удачу и теперь планирует потратить деньги
+                            на путешествия и помощь благотворительным организациям.</p>
+                        </div>
+                    </article>
+
+                    <article class="news-card">
+                        <header class="news-header">
+                            <h2 class="news-title">Пицца-робот открывает свой ресторан в США</h2>
+                            <p class="news-meta">23.08.2025 18:25 Илья&CO</p>
+                        </header>
+                        <div class="news-content">
+                        <p class="news-text">В Сан-Франциско появился новый ресторан, в котором пиццу готовит не повар,
+                            а робот! Устройство по имени «Пицца 9000» автоматизирует весь процесс — от замеса теста до подачи
+                            на стол. Пока роботы не готовят идеальную пиццу (по мнению некоторых гурманов), но ресторан уже стал
+                            хитовым и привлекает внимание искушённых любителей.</p>
+                        </div>
+                    </article>
+
                 </div>
 
-                <div class="news-card">
-                    <br><h1 class="news-title">Пополнение в московсом зоопарке</h1>
-                    <p class="news-desc">25.09.2025 10:00 Илья&CO</p>
-                    <h3 class="news-desc">У капибары родился ребенок</h3>
-                </div>
+            </section>
+        </main>
 
-                <div class="news-card">
-                    <br><h1 class="news-title">Неудачный взлет</h1>
-                    <p class="news-desc">23.08.2025 18:25 Илья&CO</p>
-                    <h3 class="news-desc">Перед взлетом у самолета отказал один двигатель. Никто не пострадал</h3>
-                </div>
+        <footer class="footer">
+            <p>© 2025 Все права защищены. Главная новостная страница</p>
+        </footer>
 
-            </div>
-        </div>
-        <footer class="footer">Футер</footer>
     </div>
+
+    <script src="../js/function.js"></script>
 </body>
+
 </html>

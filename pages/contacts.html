@@ -1,47 +1,138 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Семестровая работа</title>
+    <title>Контакты</title>
     <link rel="stylesheet" href="../style/style.css">
 </head>
+
 <body>
     <div class="page-container">
-
-        <header class="header">Хэдр</header>
-
-        <nav class = "nav">
+        <header class="header">
+            <h1>Контакты</h1>
+        </header>
+        <nav class="nav">
             <ul class="nav-list">
-                <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
-                <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
-                <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
-                <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
-                <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Главная</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="news.html">Новости</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="practices.html">Практики</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="goods_v1.html">Товары</a>
+                </li>
+
+                <li class="nav-item nav-item--active">
+                    <a class="nav-link" href="contacts.html">Контакты</a>
+                </li>
+
             </ul>
+
+            <button id="themeSwitch" class="theme-switch">☾</button> 
         </nav>
 
-        <div class="content">
+        <main class="content">
+            <section class="contacts-container">
 
-            <div class="contacts-section">
-                <div class="contacts-title">Контакты</div>
+                <h2 class="section-title">Наши контакты</h2>
 
-                <div class="contacts-card">
-                    <h2 class="contacts-decs">Адрес электронной почты: adress@email.ru</p>     
+                <article class="contact-info">
+                    <h3>Электронная почта</h3>
+                    <p>Адрес электронной почты: soap@mail.ru</p>
+                </article>
+
+                <article class="contact-info">
+                    <h3>Физический адрес</h3>
+                    <p>Адрес: г. Москва, ул. Таймсквер, д. 16</p>
+                </article>
+
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <h3>Телефон</h3>
+                        <p>+7 (123) 456-78 90</p>
+                    </div>
+
+                    <div class="contact-item">
+                        <h3>Время работы</h3>
+                        <p>Пн-Пт: 9:00-20:00</p>
+                    </div>
+
+                    <div class="contact-item">
+                        <h3>Социальные сети</h3>
+                        <p>VK, Telegram, WhatsApp</p>
+                    </div>
                 </div>
+                
+                <button class="contact-button" onclick="contactModal.showModal()">Связаться с нами</button>
+            </section>
+        </main>
 
-                <div class="contacts-card">
-                    <h2 class="contacts-decs">Адрес: г.Москва, ул.Планетная, д.16</p>
-                </div>
+        <footer class="footer">
+            <p>© 2025 Все права защищены. Контактная информация</p>
+        </footer>
 
-                <div class="contacts-btn-container">
-                    <button class="contacts-btn">Позвони мне</button>
-                </div>
-
+        <dialog id="contactModal">
+            <div class="modal-header">
+                <h2>Форма обратной связи</h2>
             </div>
 
-        </div> 
-        <footer class="footer">Футер</footer>
+            <div class="modal-content">
+                <form id="feedbackForm" method="dialog">
+
+                    <div class="form-group">
+                        <label for="name">Имя <span class="required">*</span>
+                        </label>
+                        <input type="text" id="name" name="name" required placeholder="Введите ваше имя">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Телефон <span class="required">*
+                            </span></label>
+                        <input type="tel" id="phone" name="phone" required placeholder="+7 (XXX) XXX-XX-XX">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Электронная почта <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required placeholder="example@mail.ru">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">Категория обращения <span class="required">*</span></label>
+                        <select id="category" name="category" required>
+                            <option value="">Выберите категорию</option>
+                            <option value="technical">Техническа поддержка</option>
+                            <option value="commercial">Коммерческое предложение</option>
+                            <option value="cooperation">Сотрудничество</option>
+                            <option value="complaint">Жалоба</option>
+                            <option value="suggestion">Предложение</option>
+                            <option value="other">Другое</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Текст обращения <span class="required">*</span></label>
+                        <textarea id="message" name="message" required placeholder="Опишите вашу проблему или вопрос..."></textarea>
+                    </div>
+                    
+                    <div class="modal-actions">
+                        <button type="button" class="btn btn-secondary" onclick="closeModal()">Отмена</button>
+                        <button type="button" class="btn btn-primary" onclick="submitForm()">Отправить</button>
+                    </div>
+                </form>
+            </div>
+        </dialog>
     </div>
+    <script src="../js/function.js"></script>
 </body>
+
 </html>
